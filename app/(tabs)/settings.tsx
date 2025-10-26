@@ -193,7 +193,7 @@ export default function SettingsScreen() {
             icon="code-slash-outline"
             title="Open Source"
             subtitle="View on GitHub"
-            onPress={() => handleOpenLink('https://github.com')}
+            onPress={() => handleOpenLink('https://github.com/bilxl-irfan/rivet-news-app')}
           />
         </View>
 

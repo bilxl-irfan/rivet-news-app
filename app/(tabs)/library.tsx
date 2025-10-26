@@ -126,7 +126,7 @@ export default function LibraryScreen() {
         renderEmptyState()
       ) : (
         <FlatList
-          data={articles}
+          data={articles as any}
           renderItem={({ item }) => <Article article={item} />}
           keyExtractor={(item, index) => index.toString()}
           contentContainerStyle={styles.listContent}

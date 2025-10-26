@@ -220,6 +220,7 @@ const styles = StyleSheet.create({
   },
   listContent: {
     padding: 10,
+    paddingBottom: 20,
   },
   loadingContainer: {
     position: 'absolute',

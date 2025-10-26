@@ -1,50 +1,188 @@
-# Welcome to your Expo app 👋
+<div align="center">
+  <img src="./assets/images/rivet-logo.png" alt="Rivet Logo" width="200"/>
+  
+  # 📰 Rivet News
+  
+  **Intelligent News Aggregation for the Modern Reader**
+  
+  [![React Native](https://img.shields.io/badge/React%20Native-0.76-blue.svg)](https://reactnative.dev/)
+  [![Expo](https://img.shields.io/badge/Expo-SDK%2052-000020.svg)](https://expo.dev/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)](https://www.typescriptlang.org/)
+  [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+  
+  [Features](#features) • [Screenshots](#screenshots) • [Installation](#installation) • [Tech Stack](#tech-stack) • [Contributing](#contributing)
+  
+</div>
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+---
 
-## Get started
+## 🌟 Features
 
-1. Install dependencies
+- **📱 Real-time News** - Fetches latest headlines from multiple sources via NewsAPI
+- **🔍 Smart Search** - Search articles with history tracking
+- **📚 Library Management** - Save articles for later & track reading history
+- **🎨 Beautiful UI** - Dark theme with smooth animations
+- **📂 Category Filtering** - Browse by Tech, Business, Sports, Science, Health, Entertainment
+- **⏱️ Reading Time Estimates** - Know how long articles take to read
+- **📤 Share Functionality** - Share articles across platforms
+- **💾 Offline Storage** - Persistent saved articles using AsyncStorage
+- **🌐 In-App Browser** - Read articles without leaving the app
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 📸 Screenshots
 
-   ```bash
-   npx expo start
-   ```
+<div align="center">
+  <img src="./screenshots/home.jpg" width="250" />
+  <img src="./screenshots/search.jpg" width="250" />
+  <img src="./screenshots/library.jpg" width="250" />
+</div>
 
-In the output, you'll find options to open the app in a
+<div align="center">
+  <img src="./screenshots/article.jpg" width="250" />
+  <img src="./screenshots/settings.jpg" width="250" />
+</div>
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🚀 Installation
 
-## Get a fresh project
+### Prerequisites
 
-When you're ready, run:
+- Node.js >= 18
+- npm or yarn
+- Expo CLI
+- iOS Simulator (Mac) or Android Emulator
 
-```bash
-npm run reset-project
-```
+### Setup
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+1. **Clone the repository**
+git clone https://github.com/bilxl-irfan/rivet-news-app.git
+cd rivet-news-app
 
-## Learn more
+2. **Install dependencies**
+npm install
 
-To learn more about developing your project with Expo, look at the following resources:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+3. **Get NewsAPI Key**
+- Sign up at [NewsAPI.org](https://newsapi.org/)
+- Get your free API key
 
-## Join the community
+4. **Configure API Key**
+- Open `src/news.ts`
+- Replace `YOUR_API_KEY_HERE` with your actual API key
 
-Join our community of developers creating universal apps.
+5. **Run the app**
+npx expo start
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+6. **Launch**
+- Press `i` for iOS simulator
+- Press `a` for Android emulator
+- Scan QR code with Expo Go app on your phone
+
+---
+
+## 🛠️ Tech Stack
+
+### **Frontend**
+- **React Native** - Cross-platform mobile framework
+- **Expo** - Development platform
+- **TypeScript** - Type-safe JavaScript
+- **Expo Router** - File-based navigation
+
+### **State Management**
+- **React Context API** - Global state management
+- **AsyncStorage** - Local data persistence
+
+### **UI/UX**
+- **React Native Paper** - Material Design components
+- **Expo Vector Icons** - Iconography
+- **React Native Animated** - Smooth animations
+- **WebView** - In-app article viewing
+
+### **APIs**
+- **NewsAPI** - Real-time news data
+- **Moment.js** - Date/time formatting
+
+---
+
+## 📱 App Structure
+rivet-news-app/
+├── app/
+│ ├── (tabs)/ # Tab navigation screens
+│ │ ├── index.tsx # Home screen
+│ │ ├── search.tsx # Search screen
+│ │ ├── library.tsx # Saved & History
+│ │ └── settings.tsx # Settings
+│ ├── article.tsx # Article viewer
+│ ├── contact.tsx # Contact form
+│ └── _layout.tsx # Root layout
+├── src/
+│ ├── components/ # Reusable components
+│ │ ├── Article.tsx
+│ │ ├── CategoryFilter.tsx
+│ │ └── LoadingScreen.tsx
+│ ├── context/ # Context providers
+│ │ └── StorageContext.tsx
+│ └── news.ts # NewsAPI integration
+├── assets/ # Images, fonts, etc.
+└── app.json # Expo configuration
+
+
+---
+
+## 🎯 Roadmap
+
+- [ ] Push notifications for breaking news
+- [ ] Dark/Light mode toggle
+- [ ] Multiple language support
+- [ ] Offline reading mode
+- [ ] Article recommendations based on reading history
+- [ ] Social media integration
+- [ ] Comments & discussions
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👨‍💻 Author
+
+**Bilal Irfan**
+
+- GitHub: [@bilxl-irfan](https://github.com/bilxl-irfan)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/bilal-irfan-575583233/)
+
+---
+
+## 🙏 Acknowledgments
+
+- [NewsAPI](https://newsapi.org/) - News data provider
+- [Expo](https://expo.dev/) - Development platform
+- [React Native Community](https://reactnative.dev/) - Amazing documentation
+
+---
+
+<div align="center">
+  
+  Made by Bilal Irfan
+  
+  **⭐ Star this repo if you found it helpful!**
+  
+</div>
